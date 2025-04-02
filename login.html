@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      // Login Form Validation
+      document.querySelector('form[action="login.php"]').addEventListener("submit", function (e) {
+          let emailOrMobile = document.getElementById("login-email").value.trim();
+          let password = document.getElementById("login-password").value.trim();
+  
+          if (!emailOrMobile || !password) {
+              alert("Please fill in all required fields.");
+              e.preventDefault();
+          }
+      });
+  
+      // Sign-Up Form Validation
+      document.querySelector('form[action="sign_up.php"]').addEventListener("submit", function (e) {
+          let username = document.getElementById("signup-username").value.trim();
+          let password = document.getElementById("signup-password").value.trim();
+  
+          if (!username || !password) {
+              alert("Please fill in all fields.");
+              e.preventDefault();
+              return;
+          }
+  
+          if (password.length < 6) {
+              alert("Password should be at least 6 characters long.");
+              e.preventDefault();
+          }
+      });
+  
+  });
+  
+  </script>
     <style>
         /* General Styles */
 body, html {
