@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-      
+         <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Show an alert when the page loads
+            alert("Welcome to My First Web Page!");
+        
+            // Search button functionality
+            const searchButton = document.querySelector("button");
+            const searchInput = document.querySelector("input[type='text']");
+        
+            searchButton.addEventListener("click", function () {
+                let query = searchInput.value.trim();
+                if (query) {
+                    alert("Searching for: " + query);
+                    // You can modify this to redirect to a search page, e.g.,
+                    // window.location.href = `search.html?query=${query}`;
+                } else {
+                    alert("Please enter a search term.");
+                }
+            });
+        
+            // Highlight the active navigation link
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll("nav ul li a");
+        
+            navLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+        
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My First Web Page</title>
