@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Reset some default styles */
+*/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    background-color:  rgba(0, 123, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header img {
+    max-width: 150px;
+    border-radius: 50%;
+    border-color: #000000;
+    border-width: 5px;
+    border-style: solid;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+li  {
+    background: #e6f0fd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 180px;
+}
+
+li img  {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+li img:hover {
+    border-radius: 50%;
+    transform: scale(1.8);
+}
+
+footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer img {
+    width: 20px;
+    height: auto;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header><img src="image/logo.png" alt="company" ></header>
+    <main><span>
+        <h1>Product</h1>
+        <p>Our products are made from natural ingredients and are free from harmful chemicals. We have a wide range of products to suit your needs.</p>
+        <ul>
+           <li><img src="/image/RiceBranOil.webp" alt="Rice bran oil">Rice Bran Oil</li>
+           <li><img src="image/mustard-oil.webp" alt="Mustard oil">Mustard Oil</li>
+        </ul>
+    </span></main>
+    <footer>
+        <p>© 2025 Official site</p>
+        <a href="/contact.html">contact<img src="/image/mob.webp" alt=""></a>
+    </footer>
+    </body>
+</html>

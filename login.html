@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* General Styles */
+body, html {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  form {
+    background-color: rgba(255, 243, 243, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  input {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+  }
+  
+  input:focus {
+    outline: 2px solid #ffcc00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f39c12;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 28px;
+    }
+    form {
+      padding: 15px;
+    }
+    button {
+      font-size: 14px;
+    }
+  }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or sign_up page</title>
+</head>
+<body>
+    <h1>login or sign_up</h1>
+    <form action="login.php" method="post">
+        <label for="Email">Email or Mobile number</label>
+        <input type="text" placeholder="Enter your Email or Mobile number " id="Email" required>
+        <label for="username">Username:</label>
+        <input type="text" placeholder="username(Optional)" id="username" >
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <h2>Or</h2>
+    <form action="sign_up.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
